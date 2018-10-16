@@ -49,7 +49,7 @@ def test_equilibrium_path(
     
     path.solve(state1, state2)
         
-    pathTable = pd.read_csv(tmpdir.dirname+"/equilibriumPathResult.txt", index_col=None, delim_whitespace=True)
+    pathTable = pd.read_csv(tmpdir.dirname+"/equilibriumPathResult.txt", index_col=None, sep=r'\s+')
     
     pathDict = convert_dataframe_to_dict(pathTable) 
     

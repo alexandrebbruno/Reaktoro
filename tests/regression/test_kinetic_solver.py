@@ -169,7 +169,7 @@ def test_kinetic_path_solve(num_regression,
          
     path.solve(state, timePropetie.ti, timePropetie.tf, timePropetie.unit)
      
-    pathKineticTable = pd.read_csv(tmpdir.dirname+"/kinetictPathResult.txt", index_col=None, skiprows=1, delim_whitespace=True)
+    pathKineticTable = pd.read_csv(tmpdir.dirname+"/kinetictPathResult.txt", index_col=None, skiprows=1, sep=r'\s+')
     pathKineticTable.columns = checkedVariables
      
     pathKinectDic = convert_dataframe_to_dict(pathKineticTable) 
